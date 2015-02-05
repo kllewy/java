@@ -1,0 +1,39 @@
+public class Pies {
+	int id;
+	String wlascicielImie;
+	String wlascicielNazw;
+	String imie;
+	String masc;
+	int wiek;
+	
+
+	public Pies(int id, String imie, String masc, int wiek, String wlascicielImie, String wlascicielNazw) {
+		this.id = id;
+		this.wlascicielImie = wlascicielImie;
+		this.wlascicielNazw = wlascicielNazw;
+		this.imie = imie;
+		this.masc = masc;
+		this.wiek = wiek;
+	}
+
+	public String toString() {
+		return "-------------------------------\n" + "identyfikator:         " + String.format("%08d", id) + "\n" + 
+				"WLASCICIEL: " + wlascicielImie + " " + wlascicielNazw + "\n\n" 
+				+ "IMIE: " + imie + "\n" 
+				+ "masc: " + masc + "\n" 
+				+ "wiek: " + wiek + "\n"
+				+ "-------------------------------\n";
+	}
+
+	public static void main(String[] args) {
+		Pies sfora[] = { 
+				new Pies(76589, "As", "biało-czarny", 18, "Anna", "Nowak"), 
+				new PiesRasowy(45321, "Labrador", "Elf", "czarny", 25, "Agus", "Mati", "Barbara", "Klopotek"),
+				new Pies(102467, "Kumpel", "brazowy, podpalany", 89, "Zennon", "Kula"), 
+				new PiesRasowy(9678, "York", "Beta", "brazowy", 8, "Emka", "Fidelus", "Alicja", "Kot"),
+				new Pies(666, "Baba", "zloty", 666, "Bozydar", "Nowak")};
+
+		for (int i = 0; i < sfora.length; i++)
+			System.out.println(sfora[i] + "\n\n");
+	}
+}
